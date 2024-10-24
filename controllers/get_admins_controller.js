@@ -2,7 +2,7 @@ const pool = require("../models/pg_connector");
 
 async function display_admin_page(req, res) {
     if (req.session.authented && req.session.role_id <= 2) {
-        let shop_id = 0; // Mặc định là 0 để hiển thị tất cả cửa hàng
+        let shop_id = 0; 
         if (req.body.shops) {
             shop_id = parseInt(req.body.shops);
         }
@@ -22,9 +22,9 @@ async function generate_table(shop_id) {
     let table = "";
     let query = "";
 
-    // Điều chỉnh logic để hiển thị tất cả sản phẩm nếu shop_id = 0
+    
     if (shop_id === 0) {
-        query = `SELECT * FROM products`; // Lấy tất cả sản phẩm từ mọi shop
+        query = `SELECT * FROM products`; 
     } else {
         query = {
             text: 'SELECT * FROM products WHERE shop_id = $1',
@@ -38,7 +38,7 @@ async function generate_table(shop_id) {
         const fields = result.fields;
         table = `<table border=1><tr>`;
 
-        // Tạo header của bảng
+        
         let col_list = [];
         for (let field of fields) {
             table += `<th>${field.name}</th>`;
@@ -46,7 +46,7 @@ async function generate_table(shop_id) {
         }
         table += `</tr>`;
 
-        // Tạo các dòng của bảng
+        
         for (let row of rows) {
             table += `<tr>`;
             for (let col of col_list) {
