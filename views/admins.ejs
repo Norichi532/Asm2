@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta http-equiv="refresh" content="30"> <!-- Auto-refresh every 30 seconds -->
+    <link rel="stylesheet" href="/stylesheets/styleAdminPage.css"> <!-- Link to external CSS -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><%= title %></h1>
+        <p>Welcome to <%= title %></p>
+        <a href="/logout" class="logout-btn">Logout</a>
+      </header>
+
+      <!-- Dropdown for selecting a shop -->
+      <div class="dropdown-container">
+        <%- droplist %> <!-- Inject dropdown list for shops from backend -->
+      </div>
+
+      <!-- Table to display products -->
+      <div class="table-container">
+        <%- products_table %> <!-- Inject product table from backend -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style cho toàn bộ body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  padding: 50px;
+}
+
+/* Style cho header */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Style cho link */
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho link */
+a:hover {
+  background-color: #45a049;
+}
+
+/* Style cho footer (thêm nếu bạn cần) */
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #777;
+}
+
